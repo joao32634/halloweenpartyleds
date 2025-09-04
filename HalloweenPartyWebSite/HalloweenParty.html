@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<title>HalloweenTown</title>
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+</style>
+<style>
+  h1{
+    color: rgb(228, 137, 19);
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    font-size: 50px;
+  }
+  </style>
+<style>
+    h3
+    {
+      color: rgb(214, 130, 50);
+    font-family: 'Creepster', cursive;
+    font-size: 30px;
+    }
+</style>
+<style>
+h2
+{
+      color: rgb(201, 119, 43);
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    font-size: 50px;
+}  
+</style>
+<style>
+    .DescricaoTextoBanner{
+    position:absolute;
+    top:43%;
+    left:2%;
+    font-size: 60px;
+  }
+  .textobanner{
+    position:absolute;
+    top:90%;
+    left:2%;
+    color: rgb(201, 119, 43);
+    font-family: 'Creepster', cursive;
+    font-size: 23px;
+  }
+
+</style>
+<style>
+  .espaçamento{
+    text-indent: 20px;
+  }
+</style>
+<style>
+  .text-banner{
+    position:absolute;
+    top:20%;
+    left:2%;
+    z-index: 8;
+  }
+</style>
+</head>
+<body>
+  <div class="lilcoffinAnnouncement">
+    <div class="text-strokeCoffin">
+    <h3 style="font-size: 16px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:rgb(117, 53, 170)" ><b>Evento Anual de Halloween<br> - 31 de Outubro 20:00</b></h3></div>
+</div>
+<div class="lilcoffin">
+  <img id="lilcoffin" src="Images/lilcoffin.png">
+</div>
+
+<div class="sitelogo"> <img id="sitelogo" src="Images/SiteLogoatt.png"></div>
+        <div class="menu">
+          
+    <a href="#" class="btn buttonmenu1 buttonmenu1disabled">Início</a>
+    <a href="#" class="btn buttonmenu2">Sobre</a>
+    <a href="#" class="btn buttonmenu3">Serviços <style></style></a>
+    <a href="#" class="btn buttonmenu4">Contato</a>
+    </div>
+  </div>
+    
+        
+<div class="carousel">
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <img src="Images/SiteBanner.png" alt="Imagem 1">
+        <div class="carousel-content">
+          
+<h2 class="caixa">Venha se Divertir no Halloween!</h2>
+<div class="textobanner"> <h3 class="text-stroke">garanta já seu ingresso e prepare-se para uma noite cheia de diversão, fantasias incríveis, música e surpresas aterrorizantes. Não perca!</h3>
+            <button>Reserve seu Ingresso Aqui!</button>
+        </div>
+      </div>
+      </div>
+      <div class="carousel-slide">
+        <div class="slide2">
+        <img src="Images/slideback2.png" alt="slide 2">
+        </div>
+        
+        <div class="carousel-content">
+          <h2 class="caixa">veja como é por dentro</h2>
+            <div class="textobanner"><h3 class="text-stroke">Explore a decoração assustadora da nossa mansão! Veja fotos exclusivas dos ambientes preparados para uma noite inesquecível de Halloween.</h3>
+          <button>veja as fotos aqui</button>
+          </div>
+        </div>
+        </div>
+      
+      <div class="carousel-slide">
+        <div class="slide3">
+        <img src="Images/abc.png" alt="Imagem 3">
+        </div>
+        <div class="carousel-slide3btn">
+          <button class="candy-button">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+
+    let index = 0;
+
+    function updateSlide() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateSlide();
+      const content = slides[index].querySelector('.carousel-content');
+  content.classList.remove('animar');
+  void content.offsetWidth; // reset
+  content.classList.add('animar');
+
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlide();
+      const content = slides[index].querySelector('.carousel-content');
+  content.classList.remove('animar');
+  void content.offsetWidth;
+  content.classList.add('animar');
+    });
+
+  </script>
+  </body>
+</html>
