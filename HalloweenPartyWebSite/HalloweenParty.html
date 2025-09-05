@@ -59,6 +59,15 @@ h2
     font-family: 'Creepster', cursive;
     font-size: 23px;
   }
+    .textobanner2{
+    position:absolute;
+    top: 165%;
+    left:56%;
+    color: rgb(201, 119, 43);
+    font-family: 'Creepster', cursive;
+    font-size: 23px;
+  }
+
 
 </style>
 <style>
@@ -74,6 +83,46 @@ h2
     z-index: 8;
   }
 </style>
+<style>
+  #GroupPhoto{
+ position: absolute;
+  top: 145%;
+  left: 5%;
+  width: 50%;
+  height: auto;
+  z-index: 80;
+}
+.button-content button{
+        position: absolute;
+      top: 120%;
+      left: 50%;
+      background-color:#ff6600;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+      color: #e2dee4;
+      border: none;
+      cursor: pointer;
+
+
+      /* Forma poligonal lembrando doce embalado */
+    clip-path: polygon(14% 20%, 85% 14%, 100% 100%, 0% 100%);
+    transition: clip-path 0.4s ease, -webkit-clip-path 0.4s ease;
+
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translatex(500px); }
+  to   { opacity: 1; transform: translatex(0); }
+}
+    .button-content button:hover {
+      clip-path:polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1);
+    }
+
+
+</style>
+
 </head>
 <body>
   <div class="lilcoffinAnnouncement">
@@ -93,7 +142,7 @@ h2
     <a href="#" class="btn buttonmenu4">Contato</a>
     </div>
   </div>
-    
+
         
 <div class="carousel">
     <button class="carousel-btn prev">&#10094;</button>
@@ -118,7 +167,7 @@ h2
         <div class="carousel-content">
           <h2 class="caixa">veja como é por dentro</h2>
             <div class="textobanner"><h3 class="text-stroke">Explore a decoração assustadora da nossa mansão! Veja fotos exclusivas dos ambientes preparados para uma noite inesquecível de Halloween.</h3>
-          <button>veja as fotos aqui</button>
+              <button>veja as fotos aqui</button>
           </div>
         </div>
         </div>
@@ -133,6 +182,12 @@ h2
       </div>
     </div>
   </div>
+  
+  <div class="GroupPhoto"> <img id="GroupPhoto" src="Images/GroupPhoto.png"></div>
+  <h3 class="textobanner2 text-stroke">Fotos da Festa e galleria de imagens</h3>
+  <div class="button-content">
+  <button> Veja aqui</button></div>
+
 
   <script>
     const track = document.querySelector('.carousel-track');
@@ -166,5 +221,7 @@ h2
     });
 
   </script>
+
+  
   </body>
 </html>

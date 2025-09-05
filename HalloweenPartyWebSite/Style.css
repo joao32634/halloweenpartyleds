@@ -1,6 +1,6 @@
 body {
     margin: 0; /* Remove espaço padrão do body */
-    height: 200vh; /* Faz o fundo ocupar 100% da tela */
+    height: 300vh; /* Faz o fundo ocupar 100% da tela */
     
     /* Define a imagem */
     background-image: url('Images/background.jpg'); /* Caminho para a imagem */
@@ -254,8 +254,8 @@ z-index: -2; /* Garante que a imagem fique atrás do texto */
 .caixa {
   position: relative;
   padding: 0.2em;
-  border: 9px groove #ae1cbb;   /* primeira borda */
-    color: rgb(224, 134, 49);                           /* cor do texto */
+  border: 7px ridge #ae1cbb;   /* primeira borda */
+    color: rgb(222, 118, 15);                           /* cor do texto */
   -webkit-text-stroke: 2px rgb(73, 145, 40);         /* largura e cor da borda */
 
   box-sizing: border-box;
@@ -271,7 +271,6 @@ z-index: -2; /* Garante que a imagem fique atrás do texto */
   border: 6px dotted #0f0;   /* segunda borda */
   pointer-events: none;
   box-sizing: border-box;
-  box-shadow: 0px 1px 3px 3px #0f0;
 
   filter: 
           drop-shadow(0 0 10px#ae1cbb)
@@ -537,4 +536,32 @@ z-index: -2; /* Garante que a imagem fique atrás do texto */
 
     .carousel-btn.prev { left: 10px; }
     .carousel-btn.next { right: 10px; }
+
+.button button{
+        position: absolute;
+      top: 120%;
+      left: 0%;
+      background-color:#ff6600;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+      color: #e2dee4;
+      border: none;
+      cursor: pointer;
+
+
+      /* Forma poligonal lembrando doce embalado */
+    clip-path: polygon(14% 20%, 85% 14%, 100% 100%, 0% 100%);
+    transition: clip-path 0.4s ease, -webkit-clip-path 0.4s ease;
+
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translatex(500px); }
+  to   { opacity: 1; transform: translatex(0); }
+}
+    .carousel-content button:hover {
+      clip-path:polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1);
+    }
 
