@@ -246,18 +246,32 @@ z-index: -2; /* Garante que a imagem fique atrás do texto */
   font-style: normal;
 }
 @font-face {
-  font-family: "bloodcrow";
-  src: url("fonts/bloodcrow.ttf") format("truetype");
+  font-family: "MidnightMinutes";
+  src: url("fonts/MidnightMinutes_DEMO.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "HappyHalloween";
+  src: url("fonts/HappyHalloween.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DevilCandle";
+  src: url("fonts/DevilCandle_PERSONAL_USE_ONLY.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .caixa {
   position: relative;
   padding: 0.2em;
   border: 7px groove #ae1cbb;   /* primeira borda */
-    color: rgb(222, 118, 15);                           /* cor do texto */
-  -webkit-text-stroke: 2px rgb(73, 145, 40);         /* largura e cor da borda */
-
+    color: rgb(241, 149, 57);                           /* cor do texto */
+  -webkit-text-stroke: 1px  rgb(168, 104, 241);         /* largura e cor da borda */
+  z-index: 10;
   box-sizing: border-box;
 }
 
@@ -277,6 +291,104 @@ z-index: -2; /* Garante que a imagem fique atrás do texto */
           drop-shadow(0 0 10px #ae1cbb);
   animation: ledGlow 1s infinite alternate;
 }
+
+.caixa1::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 6px groove #b47e37;   /* segunda borda */
+  border-radius: 20px;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 50px;
+
+}
+.caixa1::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  right: -11px;
+  bottom: -11px;
+  border: 6px dotted #00f0ff;   /* segunda borda */
+  border-radius: 20px;
+  pointer-events: none;
+  box-sizing: border-box;
+
+  filter: 
+          drop-shadow(0 0 10px#ae1cbb)
+          drop-shadow(0 0 10px #ae1cbb);
+  animation: ledGlow1 1s infinite alternate;
+}
+
+.caixa2::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 6px groove #b47e37;   /* segunda borda */
+  border-radius: 20px;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 50px;
+
+}
+.caixa2::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  right: -11px;
+  bottom: -11px;
+  border: 6px dotted #0f0;   /* segunda borda */
+  border-radius: 20px;
+  pointer-events: none;
+  box-sizing: border-box;
+
+  filter: 
+          drop-shadow(0 0 10px#ae1cbb)
+          drop-shadow(0 0 10px #ae1cbb);
+  animation: ledGlow2 1s infinite alternate;
+}
+.caixa3::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 6px groove #b47e37;   /* segunda borda */
+  border-radius: 20px;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 50px;
+
+}
+.caixa3::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  right: -11px;
+  bottom: -11px;
+  border: 6px dotted #7d5fff;   /* segunda borda */
+  border-radius: 20px;
+  pointer-events: none;
+  box-sizing: border-box;
+
+  filter: 
+          drop-shadow(0 0 10px#ae1cbb)
+          drop-shadow(0 0 10px #ae1cbb);
+  animation: ledGlow3 1s infinite alternate;
+}
+
+
+
 @keyframes ledGlow{
   from {
     opacity: 0.5;
@@ -292,13 +404,61 @@ z-index: -2; /* Garante que a imagem fique atrás do texto */
             drop-shadow(0 0 10px #0f0);
   }
 }
+@keyframes ledGlow1{
+  from {
+    opacity: 0.5;
+    filter:drop-shadow(0 0 10px #ae1cbb)
+           drop-shadow(0 0 10px #ae1cbb);
+
+
+  }
+  to{
+    opacity: 1;
+    filter: drop-shadow(0 0 6px#ae1cbb)
+            drop-shadow(0 0 10px #00f0ff)
+            drop-shadow(0 0 10px #00f0ff);
+  }
+}
+@keyframes ledGlow2{
+  from {
+    opacity: 0.5;
+    filter:drop-shadow(0 0 10px #ae1cbb)
+           drop-shadow(0 0 10px #ae1cbb);
+
+
+  }
+  to{
+    opacity: 1;
+    filter: drop-shadow(0 0 6px#ae1cbb)
+            drop-shadow(0 0 10px  #0f0)
+            drop-shadow(0 0 10px  #0f0);
+  }
+}
+@keyframes ledGlow3{
+  from {
+    opacity: 0.5;
+    filter:drop-shadow(0 0 10px #ae1cbb)
+           drop-shadow(0 0 10px #ae1cbb);
+
+
+  }
+  to{
+    opacity: 1;
+    filter: drop-shadow(0 0 6px#ae1cbb)
+            drop-shadow(0 0 10px  #7d5fff)
+            drop-shadow(0 0 10px #7d5fff);
+  }
+}
+
+
+
 
 .text-border {
   border: 0.4rem solid rgb(183, 70, 228);
   border-style:groove;   /* espessura, estilo e cor */
     color: rgb(224, 134, 49);                           /* cor do texto */
-  -webkit-text-stroke: 2px rgb(73, 145, 40);         /* largura e cor da borda */
-
+  -webkit-text-stroke: 2px rgb(49, 209, 174);         /* largura e cor da borda */
+  border-radius: 50px;
   padding: 0rem;              /* espaço entre texto e borda */
   display: inline-block;     /* mantém a borda só ao redor do texto */
 }
@@ -320,9 +480,10 @@ z-index: -2; /* Garante que a imagem fique atrás do texto */
   to {opacity: 1;}
 }
 .text-stroke {
-  color: rgb(58, 223, 37);                           /* cor do texto */
-  -webkit-text-stroke: 1px rgb(34, 71, 20);   
+  color: rgb(157, 238, 27);                           /* cor do texto */
+  -webkit-text-stroke: 1px rgb(188, 102, 245);   
   top: 140%;      /* largura e cor da borda */
+  size: 20px;
 }
 .text-strokeCoffin {
   color: rgb(105, 44, 141);                          /* cor do texto */
