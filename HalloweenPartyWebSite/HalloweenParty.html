@@ -91,14 +91,6 @@ h2
   }
 </style>
 <style>
-  #GroupPhoto{
- position: absolute;
-  top: 145%;
-  left: 5%;
-  width: 50%;
-  height: auto;
-  z-index: 80;
-}
 .button-content button{
         position: absolute;
       top: 190%;
@@ -152,6 +144,32 @@ h2
     }
 
 </style>
+    
+
+    <style>
+        .section {
+ position: absolute;
+  top: 180%;
+  left: 5%;
+  z-index: 80;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section img {
+  top: 145%;
+  left: 5%;
+  width: 70%;
+  height: auto;
+  z-index: 80;
+    }
+  </style>
 </head>
 <body>
   <div class="lilcoffinAnnouncement">
@@ -212,14 +230,16 @@ h2
       </div>
     </div>
   </div>
-  <div class="GroupPhotoContainer">  
-  <div class="GroupPhoto"> <img id="GroupPhoto" src="Images/GroupPhoto.png"></div>
-  </div>
-  <h2 class="DescricaoTextoBanner caixa" style="position: absolute; top: 140%; font-size: 45px; left: 62%; z-index: 50;">Fotos Exclusivas da Festa!</h2>
+  
+  <div class="section" id="anim-section">
+  <div class="GroupPhoto"><img style=" width: 60%; left: -2%;" src="Images/GroupPhoto.png" id="GroupPhoto" ></div>
+  
+  <h2 class="DescricaoTextoBanner caixa" style="position: absolute; top: -9%; font-size: 45px; left: 62%; z-index: 50;">Fotos Exclusivas da Festa!</h2>
   <h3 class="text-stroke caixa" style="color: #ff6600; -webkit-text-stroke: 1px rgb(102, 245, 178);   
- font-size: 30px; position: absolute; top: 160%; left: 57%; font-family: HappyHalloween;">Confira a foto em grupo da última edição e veja como a festa foi incrível! Venha fazer parte dessa experiência assustadoramente divertida.</h3>
-  <div class="button-content">
+ font-size: 30px; position: absolute; top: 20%; left: 57%; font-family: HappyHalloween;">Confira a foto em grupo da última edição e veja como a festa foi incrível! Venha fazer parte dessa experiência assustadoramente divertida.</h3>
+  <div class="button-content" style="position: absolute; top: 80%; left: 70%;">
   <button> Veja aqui</button></div>
+  </div>
 
 
   <script>
@@ -317,6 +337,24 @@ h2
         <li style="position: absolute; top: 80%; left: 80%;">Contato</li>
       </ul>
     </div>
+
+      <script>
+    const section = document.getElementById("anim-section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          section.classList.add("show");
+        } else {
+          section.classList.remove("show");
+        }
+      });
+    });
+    observer.observe(section);
+  </script>
+
+
+</body>
 
   
 </html>
