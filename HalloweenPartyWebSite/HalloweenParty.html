@@ -93,7 +93,7 @@ h2
 <style>
 .button-content button{
         position: absolute;
-      top: 190%;
+      top: 78%;
       left: 65%;
       background-color:#ff6600;
       padding: 15px 40px;
@@ -128,10 +128,11 @@ h2
 </style>
 <style>
   
+.ghostlist{
 
     li {
       font-size: 1.2rem;
-      margin: 1px;
+      margin: 30px;
       color: #00f0ff;
       text-shadow: 0 0 8px #00f0ff, 0 0 15px #7d5fff;
       
@@ -139,9 +140,19 @@ h2
     li:before{
       content: "●";
       position: absolute;
-      left: 12%;
-      margin: -5px;
+      left: 4%;
+
+      margin: -0px;
     }
+  }
+
+  .normallist{
+  
+    li {
+      margin: 30px;
+      
+    }    
+  }
 
 </style>
     
@@ -149,8 +160,8 @@ h2
     <style>
         .section {
  position: absolute;
-  top: 180%;
-  left: 5%;
+  
+  left: 3%;
   z-index: 80;
   opacity: 0;
   transform: translateY(100px);
@@ -169,6 +180,80 @@ h2
   height: auto;
   z-index: 80;
     }
+      .shadow-3d {
+    font-size: 30px;
+    color: #9ce22afd;
+    /* muitos text-shadows para "extrudar" */
+    text-shadow:
+      1px 1px 0 rgba(161, 67, 224, 0.533),
+      2px 2px 0 rgba(173, 74, 219, 0.6),
+      3px 3px 0 rgba(178, 67, 223, 0.667);
+    display:inline-block;
+  }
+
+        .seção {
+ position: absolute;
+  top: 320%;
+  left: 3%;
+  z-index: 80;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease;
+    }
+
+    .seção.show2 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .seção img {
+  top: 145%;
+  left: 5%;
+  width: 70%;
+  height: auto;
+  z-index: 80;
+    }
+
+            .seção2 {
+ position: absolute;
+  top: 320%;
+  left: 3%;
+  z-index: 80;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease;
+    }
+
+    .seção2.show2 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .seção2 img {
+  top: 145%;
+  left: 5%;
+  width: 70%;
+  height: auto;
+  z-index: 80;
+    }
+
+    gallery3{
+      position: absolute;
+      width: 50px;
+      height: 99px;
+      border-radius: 15px;
+     transition: transform 0.3s ease;
+      
+      }
+      gallery3:hover{
+        width: 25%;
+        height: 99%;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
+    
+  
+
   </style>
 </head>
 <body>
@@ -180,9 +265,9 @@ h2
   <img id="lilcoffin" src="Images/lilcoffin.png">
 </div>
 
-<div class="sitelogo"> <img id="sitelogo" src="Images/SiteLogoatt.png"></div>
-        <div class="menu">
-          
+        <div class="menu fixed-top">
+          <div class="sitelogo"> <img id="sitelogo" src="Images/SiteLogoatt.png" style="top: -18%;"></div>
+
     <a href="#" class="btn buttonmenu1 buttonmenu1disabled">Início</a>
     <a href="#" class="btn buttonmenu2">Sobre</a>
     <a href="#" class="btn buttonmenu3">Serviços <style></style></a>
@@ -202,8 +287,8 @@ h2
           
 <h2 class="caixa">Venha se Divertir no Halloween!</h2>
 
-<div class="textobanner" > <h3 class="text-stroke">Garanta já seu ingresso e prepare-se para uma noite cheia de diversão, fantasias incríveis, música e surpresas aterrorizantes.<br> não perca!</h3>
-            <button>Reserve seu Ingresso Aqui!</button>
+<div class="textobanner" > <h3 class="shadow-3d">Garanta já seu ingresso e prepare-se para uma noite cheia de diversão, fantasias incríveis, música e surpresas aterrorizantes.<br> não perca!</h3>
+            <a href="#Escolha seu Ingresso"><button>Reserve seu Ingresso Aqui!</button></a>
         </div>
       </div>
       </div>
@@ -214,7 +299,7 @@ h2
         
         <div class="carousel-content">
           <h2 class="caixa">Veja como é por dentro da Festa!</h2>
-            <div class="textobanner" style="top: 99%;"><h3 class="text-stroke">Explore a decoração assustadora da nossa mansão! Veja fotos exclusivas dos ambientes preparados<br> para uma noite inesquecível de Halloween.</h3>
+            <div class="textobanner" style="top: 99%;"><h3 class="shadow-3d">Explore a decoração assustadora da nossa mansão! Veja fotos exclusivas dos ambientes preparados<br> para uma noite inesquecível de Halloween.</h3>
               <button>veja as fotos aqui</button>
           </div>
         </div>
@@ -224,22 +309,87 @@ h2
         <div class="slide3">
         <img src="Images/abc.png" alt="Imagem 3">
         </div>
-        <div class="carousel-slide3btn">
-          <button class="candy-button">Comprar</button>
+        <div class="carousel-content" style="position: relative; top: 0%; left: 22%;">
+          <button>Comprar</button>
         </div>
       </div>
     </div>
   </div>
   
-  <div class="section" id="anim-section">
-  <div class="GroupPhoto"><img style=" width: 60%; left: -2%;" src="Images/GroupPhoto.png" id="GroupPhoto" ></div>
+  <div class="section" id="anim-section" style="top: 150%;">
+  <div class="GroupPhoto"><img style=" width: 50%;" src="Images/GroupPhoto.png" id="GroupPhoto" ><img style="position:absolute ; z-index: 10; width: 9%; height: auto; top: -6%; left: 45%;" src="Images/pumpkin1.png"><img style="position: absolute; top: 56%; left: -2%; width: 9%;" src="Images/pumpkin2.png"> </div>
   
-  <h2 class="DescricaoTextoBanner caixa" style="position: absolute; top: -9%; font-size: 45px; left: 62%; z-index: 50;">Fotos Exclusivas da Festa!</h2>
-  <h3 class="text-stroke caixa" style="color: #ff6600; -webkit-text-stroke: 1px rgb(102, 245, 178);   
- font-size: 30px; position: absolute; top: 20%; left: 57%; font-family: HappyHalloween;">Confira a foto em grupo da última edição e veja como a festa foi incrível! Venha fazer parte dessa experiência assustadoramente divertida.</h3>
-  <div class="button-content" style="position: absolute; top: 80%; left: 70%;">
+  <h2 class="DescricaoTextoBanner caixa" style="position: absolute; top: -20%; font-size: 42px; left: 52%; z-index: 50;">Divirta-se nessa noite de Halloween!</h2>
+  <h3  style="z-index: -1; margin-left: 30px; margin-right: 30px; color: #e4752b; -webkit-text-stroke: 1px rgb(73, 45, 23);   
+ font-size: 30px; position: absolute; top: 9%; left: 50%; font-family: HappyHalloween;">Venha participar da nossa festa de Halloween! No dia 31 de outubro, nossa festa especial traz fantasias incríveis, Bebidas personalizadas, Músicas e muito mais. <br>
+ <img style="position: absolute; top: 40%; left: 1%; width: 11%; height: auto;" src="Images/Skull.png">
+  <img style="position: absolute; top: 68%; left: 1%; width: 11%; height: auto;" src="Images/Skull.png">
+
+  <ul class="normallist" style="position: relative; left: 4%; top: 5%;">
+  <li style="font-size: 30px;">Photo Booth</li>
+  <li style="font-size: 30px;">Música ao Vivo</li>
+  <li style="font-size: 30px;">Comidas e Bebidas</li>
+ </ul>
+
+ <br><br>
+ <img style="position: absolute; top: 54%; left: 1%; width: 11%; height: auto;" src="Images/Skull.png">
+</h3>
+
+  <div class="button-content">
+    <br><br><br><br><br><br><br><br>
   <button> Veja aqui</button></div>
   </div>
+
+    <div class="seção" id="anim-section2" style="position: absolute; top: 300%; width: 90%;">
+       <h2 class="DescricaoTextoBanner caixa" style="position: absolute; top: -130%; font-size: 45px; left: 35%; z-index: 50;">Fotos Exclusivas da Festa!</h2>
+  <div class="GroupPhoto"><img style="cursor: pointer; width: 20%; border-radius: 15px;" src="Images/gallery1.png" id="GroupPhoto" >
+  <img style ="cursor: pointer; position: absolute; top: 0%; left: 22%; width: 19%; height: 99%;" src="Images/gallery3.png">
+  <img style="cursor: pointer; position: absolute; top: 0%; left: 43%; width: 19%; height: 99%;" src="Images/gallery4.png">
+  <img style ="border-radius: 15px; position: absolute; cursor: pointer; top: 0%; left: 64%; width: 20%; height: 99%;" src="Images/gallery7.jpg">
+  <img style="cursor: pointer; border-radius: 15px; position: absolute; top: 0%; left: 86%; width: 19%; height: auto;" src="Images/gallery8.jpg">
+  <img style="cursor: pointer; border-radius: 12px; position: absolute; top: 120%; left: 0%; width: 20%; 
+  height: 95%;" src="Images/gallery9.jpg">
+  <img style="cursor: pointer; border-radius: 12px; position: absolute; top: 120%; left: 22%; width: 19%; height: auto;" src="Images/gallery10.jpg">
+  <img style="cursor: pointer; border-radius: 12px; position: absolute; top: 120%; left: 43%; width: 19%; height: auto;" src="Images/gallery11.jpg">
+  <img style="cursor: pointer; border-radius: 8px; position: absolute; top: 120%; left: 64%; width: 20%; height: 95%;" src="Images/gallery12.jpg">
+  <img style="cursor: pointer; border-radius: 8px; position: absolute; top: 120%; left: 86%; width: 19%; height: auto;" src="Images/gallery13.jpg">
+  <div class="button-content" style="position: absolute; top: 220%;">
+  <button style="position: relative; left: 350%;"> Veja aqui</button></div>
+</div>
+</div>
+      <script>
+    const seção = document.getElementById("anim-section2");
+
+    const obser = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          seção.classList.add("show2");
+        } else {
+          seção.classList.remove("show2");
+        }
+      });
+    });
+    obser.observe(seção);
+  </script>
+
+      <script>
+    const seção2 = document.getElementById("anim-section3");
+
+    const obser2 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          seção2.classList.add("show2");
+        } else {
+          seção2.classList.remove("show2");
+        }
+      });
+    });
+    obser2.observe(seção2);
+  </script>
+
+  
+
+
 
 
   <script>
@@ -274,7 +424,14 @@ h2
     });
 
   </script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+    <br><br>
+<div style="position: absolute; top: 420% ; left: 35%;">   
+    <h2 class="caixa" style="color: rgb(212, 109, 39);">Escolha seu Ingresso</h2>
+      </div>
   <div class="caixa1 card text-center col-md-3 offset-1 margin-top" style="box-shadow: 0px 0px 6px 5px #232829; width: 20rem; height: 50rem;  background-image: url(Images/card11.png);background-size:cover ;background-position: center;  background-color: rgb(116, 43, 175); height: 530px; border-radius: 20px;">
     <div class="card-header">
     </div>
@@ -327,20 +484,15 @@ h2
     </div>
     </div>
     </div>
-    <div class="footer" style="position: absolute; top: 380%; width: 100%; height: 200px; background-color: rgb(20, 20, 20);">
+    </div>
+    <div class="footer" style="position: absolute; top: 600%; width: 100%; height: 200px; background-color: rgb(20, 20, 20);">
       <br><br>
       <h3 style="color: rgb(214, 112, 44); text-align: center; font-family: 'MidnightMinutes', cursive; font-size: 30px;">HalloweenTown &copy; 2025</h3>
 
-      <ul>
-        <li style="position: absolute; top: 80%; left: 40%;">Termos de Serviço</li>
-        <li style="position: absolute; top: 80%; left: 60%;">Política de Privacidade</li>
-        <li style="position: absolute; top: 80%; left: 80%;">Contato</li>
-      </ul>
     </div>
 
       <script>
     const section = document.getElementById("anim-section");
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -352,6 +504,9 @@ h2
     });
     observer.observe(section);
   </script>
+
+
+
 
 
 </body>
